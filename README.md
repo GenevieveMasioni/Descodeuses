@@ -7,6 +7,42 @@ l'association [Descodeuses](https://descodeuses.org/ "Site de l'association").
 
 # Contenus des dossiers
 
-- "static" contient le code du site intégré statiquement (HTML, CSS, JS).
-- "dynamic" contient le code du site dynamique du thème en PHP.
-- "maquettes" contient les maquettes graphiques du thème développé
+- "maquettes" contient les maquettes graphiques du thème développé.
+- "static" contient le code statique du thème (HTML, CSS, JS).
+- "dynamic" contient le code dynamique du thème (PHP), utilisable sur WordPress.
+
+# Récapitulatif des modèles à développer dans "dynamic"
+
+- [ ] Modèle d’accueil statique : `front-page.php`
+- [ ] Modèle des articles (blog) : `index.php`
+- [ ] Modèle d’un articles : `single.php`
+- [ ] Modèle des commentaires : `comments.php`
+- [ ] Modèle de page : `page.php`
+- [ ] Modèle de page d’archive : `archive.php`
+- [ ] Partie de modèle d’en-tête : `header.php`
+- [ ] Partie de modèle de pied de page : `footer.php`
+- [ ] Partie de modèle de barre latérale : `sidebar.php`
+
+### + les fichiers suivants :
+- [ ] `style.css`
+- [ ] `functions.php`
+- [ ] `customizer.php`
+- [ ] `screenshot.png`
+- [ ] `readme.txt`
+
+### Pour aller plus loin, d'autres modèles à développer :
+- [ ] `404.php`
+- [ ] `search.php`
+- [ ] `searchform.php`
+
+# Ressources
+
+Pour le développement du thème, il est possible d'utiliser les ressources suivantes :
+- Icons : [Font Awesome](https://fontawesome.com/cheatsheet/free/)
+- Images : [Unsplash](https://unsplash.com/)
+
+# Documentation WordPress
+
+Consulter la documentation officielle de WordPress pour développeurs :
+- [guide du développement de thème](https://developer.wordpress.org/themes/)
+- [référence des fonctions WordPress prédéfinies](https://developer.wordpress.org/reference/)
