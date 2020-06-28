@@ -40,6 +40,7 @@ l'association [Descodeuses](https://descodeuses.org/ "Site de l'association").
 Pour le développement du thème, il est possible d'utiliser les ressources suivantes :
 - Icons : [Font Awesome](https://fontawesome.com/cheatsheet/free/)
 - Images : [Unsplash](https://unsplash.com/)
+- Police de caractère : [Google Fonts](https://fonts.google.com/specimen/Poppins?sidebar.open&selection.family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300)
 
 # Documentation WordPress
 
