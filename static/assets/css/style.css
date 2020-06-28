@@ -408,10 +408,11 @@ h3 {
   line-height: 2rem;
 }
 
-h4 {
+h4, .navigation-top {
 	font-size: .86rem;
 	font-weight: 600;
   line-height: 1.78rem;
+  text-transform: uppercase;
 }
 
 h5 {
@@ -776,7 +777,19 @@ body {
 --------------------------------------------------------------*/
 
 .site-header {
-  padding: 0 2.86rem;
+  padding: 2.5rem 2.86rem;
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-accent);
+}
+
+.entry-header {
+
+}
+
+.site-branding img {
+  height: 1.72rem;
+  max-width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -812,6 +825,74 @@ footer.container {
 /*--------------------------------------------------------------
 11.0 Navigation
 --------------------------------------------------------------*/
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-top,
+.navigation-aside {
+  flex: .416 .416 41.6%;
+}
+
+.navigation-top ul,
+.navigation-aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation-top li,
+.navigation-aside li {
+  display: inline-block;
+  margin-right: 2.86rem;
+  position: relative;
+}
+
+.navigation-top {
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.navigation-top a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent);
+}
+
+.navigation-top a:hover::after,
+.navigation-top a.active::after {
+    left: 0;
+    width: 100%;
+}
+
+.navigation-aside {
+  justify-content: flex-end;
+}
+
+.navigation-socials a[href*="twitter.com"]::before {
+    content: "\f099";
+}
+
+.navigation-socials a[href*="facebook.com"]::before {
+    content: "\f09a";
+}
+
+.navigation-socials a[href*="instagram.com"]::before {
+    content: "\f16d";
+}
+
+.navigation-socials a[href*="pinterest.com"]::before {
+    content: "\f0d2";
+}
+
 /*--------------------------------------------------------------
 12.0 Comments
 --------------------------------------------------------------*/
