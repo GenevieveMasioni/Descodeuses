@@ -11,6 +11,15 @@ l'association [Descodeuses](https://descodeuses.org/ "Site de l'association").
 - "static" contient le code statique du thème (HTML, CSS, JS).
 - "dynamic" contient le code dynamique du thème (PHP), utilisable sur WordPress.
 
+# Où mettre mon dossier "dynamic" en local ?
+
+Comme nous développons en local, le dossier "dynamic", correspondant à notre thème WP,
+est à placer dans : `<dossier-d-installation-WordPress-local>/wp-content/themes/dynamic`.
+
+Pour éditer le code du thème, ouvrir le dossier `dynamic` dans votre éditeur de
+code favori (Atom, par exemple) et codez ! Vous verrez immédiatement les changements
+sur votre site WordPress local.
+
 # Récapitulatif des modèles à développer dans "dynamic"
 
 - [ ] Modèle d’accueil statique : `front-page.php`
