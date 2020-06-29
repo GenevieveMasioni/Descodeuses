@@ -392,7 +392,7 @@ h6:first-child {
 }
 
 h1 {
-	font-size: 3.85rem;
+	font-size: 6.43rem;
   line-height: 3.43rem;
 }
 
@@ -404,7 +404,6 @@ h2,
 
 h3 {
 	font-size: 1.28rem;
-  font-weight: 700;
   line-height: 2rem;
 }
 
@@ -783,10 +782,6 @@ body {
   color: var(--color-accent);
 }
 
-.entry-header {
-
-}
-
 .site-branding img {
   height: 1.72rem;
   max-width: 100%;
@@ -798,6 +793,17 @@ body {
 
 .container {
   padding: 0 1rem;
+}
+
+.site-content {
+  padding-top: 3.37rem;
+  display: flex;
+  margin-bottom: 5rem;
+}
+
+.sidebar {
+  flex: .33 .33 33%;
+  margin-left: 3.21rem;
 }
 
 /*--------------------------------------------------------------
@@ -815,13 +821,60 @@ footer.container {
 10.5 Posts
 --------------------------------------------------------------*/
 
+.entry {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: .07rem solid var(--color-light);
+}
+
+.entry.hero {
+  text-align: center;
+}
+
 .entry-content {
   width: 66%;
+}
+
+.entry .featured-image {
+  max-width: 100%;
+}
+
+.entry-title {
+  margin: 1rem auto;
+}
+
+.entry-data > * {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.read-more {
+  position: relative;
+  display: inline-block;
+  line-height: 1.78rem;
 }
 
 /*--------------------------------------------------------------
 10.6 Pages
 --------------------------------------------------------------*/
+
+.page-header {
+  background-image: url("../images/louvre-amy-leigh-barnard-unsplash.jpg");
+  text-align: center;
+  padding: 12.5rem 2.86rem;
+  margin: 0;
+  border: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--color-background);
+  color: var(--color-background);
+}
+
+.page-title {
+  color: var(--color-background);
+}
+
 /*--------------------------------------------------------------
 11.0 Navigation
 --------------------------------------------------------------*/
@@ -829,6 +882,19 @@ footer.container {
 .navigation {
   display: flex;
   align-items: center;
+  line-height: 1.78rem;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation li {
+  display: inline-block;
+  margin-right: 2.86rem;
+  position: relative;
 }
 
 .navigation-top,
@@ -836,45 +902,52 @@ footer.container {
   flex: .416 .416 41.6%;
 }
 
-.navigation-top ul,
-.navigation-aside ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.navigation-top li,
-.navigation-aside li {
-  display: inline-block;
-  margin-right: 2.86rem;
-  position: relative;
-}
-
 .navigation-top {
   text-align: left;
   justify-content: flex-start;
 }
 
-.navigation-top a::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -3px;
-    -webkit-transition: all .5s;
-    transition: all .5s;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-accent);
-}
-
-.navigation-top a:hover::after,
-.navigation-top a.active::after {
-    left: 0;
-    width: 100%;
+.navigation-blog {
+  justify-content: center;
 }
 
 .navigation-aside {
   justify-content: flex-end;
+}
+
+.navigation-top a::after,
+.navigation-blog a::after,
+.read-more a::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  width: 0;
+  height: 2px;
+}
+
+.navigation-top a::after,
+.read-more a::after {
+  background-color: var(--color-accent);
+}
+
+.navigation-blog a::after {
+  background-color: var(--color-background);
+}
+
+.navigation-top a:hover::after,
+.navigation-blog a:hover::after,
+.read-more a:hover::after,
+.navigation-top a.active::after,
+.navigation-blog a.active::after {
+    left: 0;
+    width: 100%;
+}
+
+.navigation-blog a {
+  color: var(--color-background);
 }
 
 .navigation-socials a[href*="twitter.com"]::before {
@@ -899,6 +972,17 @@ footer.container {
 /*--------------------------------------------------------------
 13.0 Widgets
 --------------------------------------------------------------*/
+
+.widget {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: .07rem solid var(--color-light);
+}
+
+.widget-title {
+  margin-top: 0;
+}
+
 /*--------------------------------------------------------------
 14.0 Media
 --------------------------------------------------------------*/
