@@ -915,6 +915,12 @@ footer.container {
   justify-content: flex-end;
 }
 
+.pagination ul {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
 .navigation-top a::after,
 .navigation-blog a::after,
 .read-more a::after {
