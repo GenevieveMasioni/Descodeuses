@@ -878,6 +878,7 @@ body {
 .entry .featured-image {
   max-width: 100%;
   margin-bottom: 2rem;
+	height: auto;
 }
 
 .entry-title {

@@ -18,7 +18,7 @@
       <article class="entry post">
         <header class="entry-header">
           <?php if(has_post_thumbnail()) : ?>
-            <?php the_post_thumbnail(['class' => 'featured-image', 'title' => 'Vignette']); ?>
+            <?php the_post_thumbnail('full', ['class' => 'featured-image', 'title' => 'Vignette']); ?>
           <?php endif; ?>
           <section class="entry-metadata">
             <section class="entry-data">
