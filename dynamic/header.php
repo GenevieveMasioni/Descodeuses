@@ -1,14 +1,42 @@
 <!DOCTYPE html>
-<!-- Doc WP : https://developer.wordpress.org/reference/ -->
+<!-- Documenttaion oficielle WordPress pour s'informer sur l'utilisation
+des fonctions : https://developer.wordpress.org/reference/ -->
+
+<!-- Le code dynamique WordPress consiste simplement à remplacer des données
+écrites en dur dans le code par leur version dynamique grâce à des fonctions
+WordPress prédéfinies. Ces fonctions sont chargées de faire les requêtes
+nécessaires à la base de données pour récupérer l'information qui nous intéresse.
+-->
+
+<!-- language_attributes() : permet de récupérer les informations liées à la
+langue du site WordPress utilisant notre thème.
+Cette fonction écrit une chaîne de caractères. On y trouve par exemple :
+'lang="fr-FR"'
+ -->
 <html <?php language_attributes(); ?>>
 <head>
+  <!-- bloginfo() : permet de récupérer des informations du site configurées par
+  le propriétaire du site depuis le tableau de bord WP.
+  La fonction reçoit en paramètre le nom de l'information que l'on veut afficher.
+  Ici, 'charset' permet d'afficher le format d'encodage de la langue utilisée
+  sur le site. Exemple : "UTF-8" -->
   <meta charset="<?php bloginfo('charset'); ?>">
+  <!-- toujours la fonction bloginfo() pour obtenir la description du site  -->
   <meta name="description" content="<?php bloginfo('description'); ?>">
+  <!-- toujours la fonction bloginfo() pour obtenir le nom de l'auteur/
+  propriétaire du site  -->
   <meta name="author" content="<?php bloginfo('author'); ?>">
+  <!-- toujours la fonction bloginfo() pour obtenir le nom de la page consultée -->
   <title><?php bloginfo('name'); ?></title>
+  <!-- toujours la fonction bloginfo() pour obtenir le chemin du fichier style.css  -->
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+  <!-- Inclusion de Google Fonts pour pouvoir utiliser la police de caractère "Poppins" -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+  <!-- Inclusion de Font Awesome pour pouvoir utiliser des icons -->
   <script src="https://kit.fontawesome.com/4e5f136f21.js" crossorigin="anonymous"></script>
+  <!-- wp_head() : permet à WordPress d'inclure ses propres informations d'ent-ête.
+  dans la documentation, il est recommandé de faire cet appel de fonction 
+  avant de fermer la balise <head> -->
   <?php wp_head(); ?>
 </head>
 <body>
