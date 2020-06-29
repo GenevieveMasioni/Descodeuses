@@ -847,10 +847,11 @@ body {
   padding-bottom: 2rem;
   margin-bottom: 2rem;
   border-bottom: .07rem solid var(--color-light);
+  text-align: center;
 }
 
-.entry.hero {
-  text-align: center;
+.entry-content.single {
+  text-align: left;
 }
 
 .entry-content {
@@ -859,6 +860,7 @@ body {
 
 .entry .featured-image {
   max-width: 100%;
+  margin-bottom: 2rem;
 }
 
 .entry-title {
@@ -949,6 +951,23 @@ body {
   flex: 1;
   display: flex;
   justify-content: space-between;
+}
+
+.pagination li {
+  flex: .5 .5 50%;
+}
+
+.pagination li:first-child {
+  text-align: left;
+}
+
+.pagination li:last-child {
+  text-align: right;
+}
+
+.entry-pagination {
+  border-top: .07rem solid var(--color-light);
+  padding-top: 2rem;
 }
 
 .navigation-top a::after,
