@@ -528,7 +528,7 @@ label {
 	color: var(--color-main);
 	display: block;
 	font-weight: 500;
-	margin-bottom: 0.5em;
+	margin: 1rem auto;
 }
 
 fieldset {
@@ -554,7 +554,8 @@ input[type="color"],
 textarea {
 	color: var(--color-main);
 	background: var(--color-background);
-	border: .07rem solid var(--color-light);
+  border: none;
+	border-bottom: .07rem solid var(--color-light);
 	-webkit-border-radius: .21rem;
 	border-radius: .21rem;
 	display: inline-block;
@@ -850,7 +851,11 @@ body {
   text-align: center;
 }
 
-.entry-content.single {
+.entry.single {
+  border-bottom: none;
+}
+
+.single .entry-content {
   text-align: left;
 }
 
@@ -1032,6 +1037,22 @@ body {
 /*--------------------------------------------------------------
 12.0 Comments
 --------------------------------------------------------------*/
+
+section.comments {
+  margin: 2rem auto;
+  padding: 2rem 0;
+  border-top: .07rem solid var(--color-light);
+}
+
+.comment-form > * {
+  width: 100%;
+  text-align: left;
+}
+
+.comment-form input[type="submit"] {
+  width: auto;
+}
+
 /*--------------------------------------------------------------
 13.0 Widgets
 --------------------------------------------------------------*/

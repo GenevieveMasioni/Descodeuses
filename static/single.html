@@ -46,7 +46,7 @@
     </nav>
   </header>
   <main class="container site-content">
-      <article class="entry post">
+      <article class="entry single">
         <header class="entry-header">
           <section class="entry-metadata">
             <section class="entry-data">
@@ -61,7 +61,7 @@
           <img src="./assets/images/louvre-alicia-steels-unsplash.jpg" alt="Foule"
           class="featured-image">
         </header>
-        <section class="entry-content single">
+        <section class="entry-content">
           <p>
             Excepteur sint occaecat cupidatat non proident,
             sunt in culpa qui officia deseru mollit anim id est laborum.
@@ -101,6 +101,18 @@
               <li><a href="#">La Joconde victime de son succès <i class="fas fa-arrow-right"></i></a></li>
             </ul>
           </nav>
+          <section class="comments">
+            <h3 class="comments-title">Laisser un commentaire</h3>
+            <form class="comment-form" action="index.html" method="post">
+              <label for="name">Nom</label>
+              <input type="text" name="name" required>
+              <label for="email">E-mail</label>
+              <input type="email" name="email" required>
+              <label for="comment">Commentaire</label>
+              <input type="textarea" rows="10" cols="80" name="comment" required>
+              <input type="submit" name="submit" value="Envoyer">
+            </form>
+          </section>
         </footer>
       </article>
     <aside class="sidebar">
