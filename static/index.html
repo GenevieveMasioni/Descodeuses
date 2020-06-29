@@ -9,7 +9,7 @@
 </head>
 <body>
   <header class="site-header">
-    <nav class="navigation navigation-top">
+    <nav class="navigation navigation-top desktop-navigation">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Shop</a></li>
@@ -17,8 +17,20 @@
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
+    <nav class="navigation navigation-top mobile-navigation">
+      <ul>
+        <li class="mobile-menu"><i class="fa fa-bars fa-1x"></i>
+          <ul class="sub-navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="index.html" class="active">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
     <div class="site-branding">
-      <img src="./assets/images/logo-louvre.png" alt="Site logo" >
+      <img src="./assets/images/logo-louvre.png" alt="Logo du site" >
     </div>
     <nav class="navigation navigation-aside">
       <ul>
@@ -140,17 +152,69 @@
     </section>
     <aside class="sidebar">
       <div class="widget">
-        <h3 class="widget-title">Catégories populaires</h3>
-        <ul>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </ul>
+        <h3 class="widget-title">Zone de widgets</h3>
+        <p>Ajout dynamique des titres et contenus des widgets.</p>
       </div>
     </aside>
   </main>
+  <footer class="site-footer container">
+    <section class="widgets-sections">
+      <div class="widgets-section widgets-section-1">
+        <h4 class="widget-title">Zone de widgets 1</h4>
+        <img src="./assets/images/logo-louvre.png" alt="Logo du site" >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing,
+          sed do eiusmod tempor incididunt.
+        </p>
+      </div>
+      <div class="widgets-section widgets-section-2">
+        <h4 class="widget-title">Zone de widgets 2</h4>
+        <img src="./assets/images/logo-louvre.png" alt="Logo du site" >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing,
+          sed do eiusmod tempor incididunt.
+        </p>
+      </div>
+      <div class="widgets-section widgets-section-3">
+        <h4 class="widget-title">Zone de widgets 3</h4>
+        <img src="./assets/images/logo-louvre.png" alt="Logo du site" >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing,
+          sed do eiusmod tempor incididunt.
+        </p>
+      </div>
+      <div class="widgets-section widgets-section-4">
+        <h4 class="widget-title">Zone de widgets 4</h4>
+        <img src="./assets/images/logo-louvre.png" alt="Logo du site" >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing,
+          sed do eiusmod tempor incididunt.
+        </p>
+      </div>
+    </section>
+    <section class="footer-infos">
+      <div class="navigation-secondary">
+        <nav class="navigation navigation-bottom">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="index.html" class="active">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="social-medias">
+        <nav class="navigation navigation-socials">
+          <ul>
+            <li><a href="http://twitter.com"></a></li>
+            <li><a href="http://instagram.com"></a></li>
+            <li><a href="http://facebook.com"></a></li>
+            <li><a href="http://pinterest.com"></a></li>
+            <li><a href="http://youtube.com"></a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </footer>
 </body>
 </html>
