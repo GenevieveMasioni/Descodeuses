@@ -40,11 +40,6 @@ Cette fonction écrit une chaîne de caractères. On y trouve par exemple :
   Dans la documentation, il est recommandé de faire cet appel de fonction
   avant de fermer la balise <head> -->
   <?php wp_head(); ?>
-  <style media="screen">
-  .page-header {
-    background-image: url("<?php bloginfo('template_url'); ?>/assets/images/louvre-amy-leigh-barnard-unsplash.jpg");
-  }
-  </style>
 </head>
 <!-- COURS - appel de fonction pour l'affichage correcte (mise en forme)
 du menu d'administration à l'accueil du site -->

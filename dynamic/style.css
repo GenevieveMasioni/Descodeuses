@@ -905,7 +905,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: var(--color-background);
+  background-color: var(--color-accent);
   color: var(--color-background);
 }
 
