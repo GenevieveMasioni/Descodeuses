@@ -11,13 +11,13 @@ On appelle donc la fonction get_header(); pour inclure ce fichier header.php.
     <!-- TODO Volontaire - Déclarer une zone de menu "Menu des catégories" et
     l'insérer dynamiquement ci-après -->
     <nav class="navigation navigation-blog" id="navigation-blog">
-      <ul>
-        <li><a href="#" class="active">Tous</a></li>
-        <li><a href="#">Peinture</a></li>
-        <li><a href="#">Sculpture</a></li>
-        <li><a href="#">Exposition</a></li>
-        <li><a href="#">Actualité</a></li>
-      </ul>
+      <?php
+      wp_nav_menu(
+        array(
+          'theme_location'  => 'secondary'
+        )
+      );
+       ?>
     </nav>
   </section>
   <main class="container site-content">
