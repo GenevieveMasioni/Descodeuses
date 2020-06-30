@@ -53,6 +53,7 @@
         <footer class="entry-footer">
           <?php
           // Structure du tableau d'arguments : https://developer.wordpress.org/reference/functions/get_the_post_navigation/
+          // %title : indique à WP qu'il faut inclure le nom de l'article suivant/ précédent 
           the_post_navigation(
             array(
               'prev_text'          => '<i class="fas fa-arrow-left"></i> %title',
