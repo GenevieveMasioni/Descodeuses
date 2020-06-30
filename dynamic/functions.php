@@ -10,7 +10,9 @@ function descodeuses_setup() {
     array(
       // on définit la clé de notre menu qui servira d'identifiant pour pouvoir
       // l'afficher sur le site
-      'primary' => 'Menu principal'
+      'primary' => 'Menu principal',
+      'secondary' => 'Menu secondaire',
+      'footer' => 'Menu de pied de page'
     )
   );
 }

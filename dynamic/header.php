@@ -38,6 +38,18 @@ Cette fonction écrit une chaîne de caractères. On y trouve par exemple :
   Dans la documentation, il est recommandé de faire cet appel de fonction
   avant de fermer la balise <head> -->
   <?php wp_head(); ?>
+  <style media="screen">
+  .page-header {
+    background-image: url("<?php bloginfo('template_url'); ?>/assets/images/louvre-amy-leigh-barnard-unsplash.jpg");
+  }
+
+  @font-face {
+    font-family: "FontAwesome";
+    font-weight: normal;
+    font-style : normal;
+    src : url("<?php bloginfo('template_url'); ?>/assets/fonts/fontawesome/webfonts/fa-brands-400.woff2") format("woff2");
+  }
+  </style>
 </head>
 <!-- COURS - appel de fonction pour l'affichage correcte (mise en forme)
 du menu d'administration à l'accueil du site -->
@@ -49,7 +61,7 @@ du menu d'administration à l'accueil du site -->
       // inclusion de la zone de menu principal (clé "primary")
       // wp_nav_menu() : crée une balise <ul> avec les liens vers les éléments
       // d'un menu; dans notre cas, les élements du menu que l'utilisateur de
-      // notre thème aura choisi d'afficher à l'emplacement "menu principal". 
+      // notre thème aura choisi d'afficher à l'emplacement "menu principal".
       wp_nav_menu(
         array(
           'theme_location'  => 'primary'
