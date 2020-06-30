@@ -101,7 +101,7 @@ On appelle donc la fonction get_header(); pour inclure ce fichier header.php.
     </section>
     <aside class="sidebar">
       <div class="widget">
-        <h3 class="widget-title">Zone de widgets</h3>
+        <h3 class="widget-title widgettitle">Zone de widgets</h3>
         <p>Ajout dynamique des titres et contenus des widgets.</p>
       </div>
     </aside>

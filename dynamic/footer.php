@@ -1,36 +1,44 @@
 <footer class="site-footer container">
   <section class="widgets-sections">
     <div class="widgets-section widgets-section-1">
-      <h4 class="widget-title">Zone de widgets 1</h4>
-      <img src="./assets/images/logo-louvre.png" alt="Logo du site" >
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing,
-        sed do eiusmod tempor incididunt.
-      </p>
+      <div class="widget">
+        <h4 class="widget-title widgettitle">Zone de widgets 1</h4>
+        <img src="./assets/images/logo-louvre.png" alt="Logo du site" >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing,
+          sed do eiusmod tempor incididunt.
+        </p>
+      </div>
     </div>
     <div class="widgets-section widgets-section-2">
-      <h4 class="widget-title">Zone de widgets 2</h4>
-      <img src="./assets/images/logo-louvre.png" alt="Logo du site" >
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing,
-        sed do eiusmod tempor incididunt.
-      </p>
+      <div class="widget">
+        <h4 class="widget-title widgettitle">Zone de widgets 2</h4>
+        <img src="./assets/images/logo-louvre.png" alt="Logo du site" >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing,
+          sed do eiusmod tempor incididunt.
+        </p>
+      </div>
     </div>
     <div class="widgets-section widgets-section-3">
-      <h4 class="widget-title">Zone de widgets 3</h4>
-      <img src="./assets/images/logo-louvre.png" alt="Logo du site" >
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing,
-        sed do eiusmod tempor incididunt.
-      </p>
+      <div class="widget">
+        <h4 class="widget-title widgettitle">Zone de widgets 3</h4>
+        <img src="./assets/images/logo-louvre.png" alt="Logo du site" >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing,
+          sed do eiusmod tempor incididunt.
+        </p>
+      </div>
     </div>
     <div class="widgets-section widgets-section-4">
-      <h4 class="widget-title">Zone de widgets 4</h4>
-      <img src="./assets/images/logo-louvre.png" alt="Logo du site" >
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing,
-        sed do eiusmod tempor incididunt.
-      </p>
+      <div class="widget">
+        <h4 class="widget-title widgettitle">Zone de widgets 4</h4>
+        <img src="./assets/images/logo-louvre.png" alt="Logo du site" >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing,
+          sed do eiusmod tempor incididunt.
+        </p>
+      </div>
     </div>
   </section>
   <section class="footer-infos">
