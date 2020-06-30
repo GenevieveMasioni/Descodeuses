@@ -12,9 +12,20 @@ function descodeuses_setup() {
       // l'afficher sur le site
       'primary' => 'Menu principal',
       'secondary' => 'Menu secondaire',
-      'footer' => 'Menu de pied de page'
+      'footer' => 'Menu de pied de page',
+      'social' => 'Menu des réseaux sociaux'
     )
   );
+
+  // TODO En autonomie - Activer la fonctionnalité WP permettant de prendre
+  // en charge un logo personnalisé.
+  // indice : add_theme_support
+  // 1. Que fait cette fonction ?
+  //
+  // 2. Quel argument faut-il passer ? (section 'Parameters')
+  //
+  // 3. Faire l'appel de fonction ci-après (ne passer que le premier argument) :
+
 }
 
 // WordPress étant un gros CMS, il est nécessaire de configurer beaucoup de
@@ -31,5 +42,19 @@ function descodeuses_setup() {
 // De cette façon, il est certain que WP a terminé ses propres configurations
 // avant de prendre en charge les nôtres. On évite donc les bugs ! :)
 add_action('after_setup_theme', 'descodeuses_setup');
+
+function descodeuses_init_widgets() {
+  // TODO COURS - Enregistrer une zone de widget N°1
+
+  // TODO En autonomie - Enregister les zones de widgets N°2 et N°3
+
+  // TODO A la maison - Enregister les zones de widgets N°4 et barre latérale
+}
+
+// Exécution de notre fonction immédiatement après l'exécution de widgets_init
+// (fonction WP prédéfinie lui servant à initialiser les widgets par défaut
+// avant d'enregistrer les nôtres)
+// doc : https://developer.wordpress.org/reference/hooks/widgets_init/
+add_action('widgets_init', 'descodeuses_init_widgets');
 
  ?>

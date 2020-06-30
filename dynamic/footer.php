@@ -63,13 +63,13 @@
     l'insérer dynamiquement ci-après -->
     <div class="social-medias">
       <nav class="navigation navigation-socials" id="navigation-socials">
-        <ul>
-          <li><a href="http://twitter.com"></a></li>
-          <li><a href="http://instagram.com"></a></li>
-          <li><a href="http://facebook.com"></a></li>
-          <li><a href="http://pinterest.com"></a></li>
-          <li><a href="http://youtube.com"></a></li>
-        </ul>
+        <?php
+        wp_nav_menu(
+          array(
+            'theme_location'  => 'social'
+          )
+        );
+         ?>
       </nav>
     </div>
   </section>

@@ -112,7 +112,7 @@ On appelle donc la fonction get_header(); pour inclure ce fichier header.php.
     et faire un appel de fonction pour inclure le fichier à ce niveau.
     Indice : get_<quelque chose> -->
     <!-- TODO A la maison - Déclarer une zone de widgets et l'insérer dynamiquement ci-après -->
-    <aside class="sidebar" id="sidebar">
+    <aside class="sidebar" id="widgets-sidebar">
       <div class="widget">
         <h3 class="widget-title widgettitle">Zone de widgets</h3>
         <p>Ajout dynamique des titres et contenus des widgets.</p>
