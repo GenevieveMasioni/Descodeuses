@@ -103,6 +103,9 @@ On appelle donc la fonction get_header(); pour inclure ce fichier header.php.
         </ul>
       </nav>
     </section>
+    <!-- TODO A la maison - Déplacer la balise <aside> dans un fichier sidebar.php
+    et faire un appel de fonction pour inclure le fichier à ce niveau.
+    Indice : get_<quelque chose> -->
     <!-- TODO A la maison - Déclarer une zone de widgets et l'insérer dynamiquement ci-après -->
     <aside class="sidebar" id="sidebar">
       <div class="widget">
