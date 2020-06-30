@@ -73,7 +73,8 @@
     </div>
   </section>
 </footer>
-<!-- TODO COURS - appel de fonction mystère pour afficher le menu d'administration
+<!-- COURS - appel de fonction pour afficher le menu d'administration
 à l'accueil du site et permettre la réactualisation automoatique au niveau du Customizer -->
+<?php wp_footer(); ?>
 </body>
 </html>

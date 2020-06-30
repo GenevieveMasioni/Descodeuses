@@ -39,18 +39,23 @@ Cette fonction écrit une chaîne de caractères. On y trouve par exemple :
   avant de fermer la balise <head> -->
   <?php wp_head(); ?>
 </head>
-<!-- TODO COURS - appel de fonction mystère pour l'affichage correcte (mise en forme)
+<!-- COURS - appel de fonction pour l'affichage correcte (mise en forme)
 du menu d'administration à l'accueil du site -->
-<body>
+<body <?php body_class(); ?>>
   <header class="site-header">
-    <!-- TODO COURS - Configurer une zone de menu et l'insérer dynamiquement -->
+    <!-- COURS - Configurer une zone de menu et l'insérer dynamiquement -->
     <nav class="navigation navigation-top desktop-navigation">
-      <ul>
-        <li><a href="home.html">Accueil</a></li>
-        <li><a href="#">Boutique</a></li>
-        <li><a href="index.html" class="active">Blog</a></li>
-        <li><a href="page.html">Contact</a></li>
-      </ul>
+      <?php
+      // inclusion de la zone de menu principal (clé "primary")
+      // wp_nav_menu() : crée une balise <ul> avec les liens vers les éléments
+      // d'un menu; dans notre cas, les élements du menu que l'utilisateur de
+      // notre thème aura choisi d'afficher à l'emplacement "menu principal". 
+      wp_nav_menu(
+        array(
+          'theme_location'  => 'primary'
+        )
+      );
+       ?>
     </nav>
     <nav class="navigation navigation-top mobile-navigation">
       <ul>
