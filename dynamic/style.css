@@ -1083,7 +1083,27 @@ body {
 }
 
 .navigation-socials a[href*="youtube.com"]::before {
+    content: "\f40a";
+}
+
+.navigation-socials a[href*="dailymotion.com"]::before {
+    content: "\f952";
+}
+
+.navigation-socials a[href*="vimeo.com"]::before {
     content: "\f167";
+}
+
+.navigation-socials a[href*="spotify.com"]::before {
+    content: "\f1bc";
+}
+
+.navigation-socials a[href*="github.com"]::before {
+    content: "\f09b";
+}
+
+.navigation-socials a[href*="gitlab.com"]::before {
+    content: "\f296";
 }
 
 /*--------------------------------------------------------------
