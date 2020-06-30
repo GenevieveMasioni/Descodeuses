@@ -32,6 +32,8 @@ Cette fonction écrit une chaîne de caractères. On y trouve par exemple :
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
   <!-- Inclusion de Google Fonts pour pouvoir utiliser la police de caractère "Poppins" -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+  <!-- Inclusion d'une feuille de style pour pouvoir utiliser la police de caractère FontAwesome -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <!-- Inclusion de Font Awesome pour pouvoir utiliser des icons -->
   <script src="https://kit.fontawesome.com/4e5f136f21.js" crossorigin="anonymous"></script>
   <!-- wp_head() : permet à WordPress d'inclure ses propres informations d'en-tête.
@@ -41,13 +43,6 @@ Cette fonction écrit une chaîne de caractères. On y trouve par exemple :
   <style media="screen">
   .page-header {
     background-image: url("<?php bloginfo('template_url'); ?>/assets/images/louvre-amy-leigh-barnard-unsplash.jpg");
-  }
-
-  @font-face {
-    font-family: "FontAwesome";
-    font-weight: normal;
-    font-style : normal;
-    src : url("<?php bloginfo('template_url'); ?>/assets/fonts/fontawesome/webfonts/fa-brands-400.woff2") format("woff2");
   }
   </style>
 </head>

@@ -353,13 +353,6 @@ template {
 4.0 Typography
 --------------------------------------------------------------*/
 
-@font-face {
-  font-family: "FontAwesome";
-  font-weight: normal;
-  font-style : normal;
-  src : url("../fonts/fontawesome/webfonts/fa-brands-400.woff2") format("woff2");
-}
-
 :root {
   --font-family: "Poppins", sans-serif;
   --font-formatted: "Courier", Courier, monospace;
@@ -1043,8 +1036,34 @@ body {
   color: var(--color-background);
 }
 
-.navigation-socials a {
+.menu-item-has-children .sub-menu {
+	display: none;
+}
+
+.menu-item-has-children:hover > .sub-menu {
+	display: inline-block;
+	position: absolute;
+	top: 2rem;
+	left: 0;
+	padding: 1rem;
+	background: var(--color-background);
+	box-sizing: content-box;
+	width: 100%;
+}
+
+.sub-menu li {
+	display: flex;
+	width: 100%;
+}
+
+.navigation-socials a,
+.menu-item-has-children::after {
   font-family: "FontAwesome", FontAwesome;
+}
+
+.menu-item-has-children::after {
+    content: '\f107';
+		margin: auto .3rem;
 }
 
 .navigation-socials a[href*="twitter.com"]::before {
