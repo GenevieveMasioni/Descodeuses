@@ -8,7 +8,9 @@ On appelle donc la fonction get_header(); pour inclure ce fichier header.php.
 <?php get_header(); ?>
   <section class="page-header">
     <h1 class="page-title">Blog</h1>
-    <nav class="navigation navigation-blog">
+    <!-- TODO Volontaire - Déclarer une zone de menu "Menu des catégories" et
+    l'insérer dynamiquement ci-après -->
+    <nav class="navigation navigation-blog" id="navigation-blog">
       <ul>
         <li><a href="#" class="active">Tous</a></li>
         <li><a href="#">Peinture</a></li>
@@ -92,6 +94,8 @@ On appelle donc la fonction get_header(); pour inclure ce fichier header.php.
       <!-- On pense à bien fermer if() et while() -->
     <?php endwhile; ?>
   <?php endif; ?>
+  <!-- TODO Volontaire - Pagination de l'ensemble des articles - utiliser the_posts_pagination()
+  Structure du tableau d'arguments : https://developer.wordpress.org/reference/functions/paginate_links/ -->
       <nav class="navigation pagination">
         <ul>
           <li><a href="#"><i class="fas fa-arrow-left"></i> Précédent</a></li>
@@ -99,7 +103,8 @@ On appelle donc la fonction get_header(); pour inclure ce fichier header.php.
         </ul>
       </nav>
     </section>
-    <aside class="sidebar">
+    <!-- TODO A la maison - Déclarer une zone de widgets et l'insérer dynamiquement ci-après -->
+    <aside class="sidebar" id="sidebar">
       <div class="widget">
         <h3 class="widget-title widgettitle">Zone de widgets</h3>
         <p>Ajout dynamique des titres et contenus des widgets.</p>

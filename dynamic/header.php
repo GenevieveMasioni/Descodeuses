@@ -34,13 +34,16 @@ Cette fonction écrit une chaîne de caractères. On y trouve par exemple :
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
   <!-- Inclusion de Font Awesome pour pouvoir utiliser des icons -->
   <script src="https://kit.fontawesome.com/4e5f136f21.js" crossorigin="anonymous"></script>
-  <!-- wp_head() : permet à WordPress d'inclure ses propres informations d'ent-ête.
-  dans la documentation, il est recommandé de faire cet appel de fonction 
+  <!-- wp_head() : permet à WordPress d'inclure ses propres informations d'en-tête.
+  Dans la documentation, il est recommandé de faire cet appel de fonction
   avant de fermer la balise <head> -->
   <?php wp_head(); ?>
 </head>
+<!-- TODO COURS - appel de fonction mystère pour l'affichage correcte (mise en forme)
+du menu d'administration à l'accueil du site -->
 <body>
   <header class="site-header">
+    <!-- TODO COURS - Configurer une zone de menu et l'insérer dynamiquement -->
     <nav class="navigation navigation-top desktop-navigation">
       <ul>
         <li><a href="home.html">Accueil</a></li>
@@ -62,6 +65,14 @@ Cette fonction écrit une chaîne de caractères. On y trouve par exemple :
       </ul>
     </nav>
     <div class="site-branding">
+      <!-- TODO En autonomie - Afficher un logo personnalisé si existant, sinon afficher le nom du site
+      Quand on clique sur le nom, redirection vers la page d'accueil du site.
+      aide :
+      - has_custom_logo() : tester si un logo personnalisé a été configuré
+      - the_custom_logo() : récupérer le logo personnalisé
+      - bloginfo() : récupérer l'url du site (pour redirection) et le nom du site
+        > Quels arguments faut-il passer pour avoir ces informations ?
+      -->
       <a href="index.html"><img src="./assets/images/logo-louvre.png" alt="Logo du site"></a>
     </div>
     <nav class="navigation navigation-aside">
