@@ -97,10 +97,15 @@ On appelle donc la fonction get_header(); pour inclure ce fichier header.php.
   <!-- TODO Volontaire - Pagination de l'ensemble des articles - utiliser the_posts_pagination()
   Structure du tableau d'arguments : https://developer.wordpress.org/reference/functions/paginate_links/ -->
       <nav class="navigation pagination">
-        <ul>
-          <li><a href="#"><i class="fas fa-arrow-left"></i> Précédent</a></li>
-          <li><a href="#">Suivant <i class="fas fa-arrow-right"></i></a></li>
-        </ul>
+        <?php
+        // Structure du tableau d'arguments : https://developer.wordpress.org/reference/functions/paginate_links/
+        the_posts_pagination(
+          array(
+            'prev_text'          => '<i class="fas fa-arrow-left"></i> Précédent',
+            'next_text'          => 'Suivant <i class="fas fa-arrow-right"></i>'
+          )
+        );
+        ?>
       </nav>
     </section>
     <!-- TODO A la maison - Déplacer la balise <aside> dans un fichier sidebar.php
