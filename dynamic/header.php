@@ -72,12 +72,14 @@ du menu d'administration à l'accueil du site -->
     <nav class="navigation navigation-top mobile-navigation">
       <ul>
         <li class="mobile-menu"><i class="fa fa-bars fa-1x"></i>
-          <ul class="sub-navigation">
-            <li><a href="home.html">Accueil</a></li>
-            <li><a href="#">Boutique</a></li>
-            <li><a href="index.html" class="active">Blog</a></li>
-            <li><a href="page.html">Contact</a></li>
-          </ul>
+          <?php
+          wp_nav_menu(
+            array(
+              'theme_location'  => 'primary',
+              'class'           => 'sub-navigation'
+            )
+          );
+           ?>
         </li>
       </ul>
     </nav>
