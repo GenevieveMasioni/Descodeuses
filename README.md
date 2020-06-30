@@ -24,7 +24,7 @@ sur votre site WordPress local.
 
 - [ ] Modèle d’accueil statique : `front-page.php`
 - [ ] Modèle des articles (blog) : `index.php`
-- [ ] Modèle d’un articles : `single.php`
+- [x] Modèle d’un articles : `single.php`
 - [ ] Modèle des commentaires : `comments.php`
 - [ ] Modèle de page : `page.php`
 - [ ] Modèle de page d’archive : `archive.php`
@@ -33,11 +33,11 @@ sur votre site WordPress local.
 - [ ] Partie de modèle de barre latérale : `sidebar.php`
 
 ### + les fichiers suivants :
-- [ ] `style.css`
+- [x] `style.css`
 - [ ] `functions.php`
 - [ ] `customizer.php`
-- [ ] `screenshot.png`
-- [ ] `readme.txt`
+- [x] `screenshot.png`
+- [x] `readme.txt`
 
 ### Pour aller plus loin, d'autres modèles à développer :
 - [ ] `404.php`
