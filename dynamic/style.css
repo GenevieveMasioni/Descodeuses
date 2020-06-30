@@ -1049,6 +1049,7 @@ body {
 	background: var(--color-background);
 	box-sizing: content-box;
 	width: 100%;
+	z-index: 10;
 }
 
 .sub-menu li {
@@ -1083,7 +1084,7 @@ body {
 }
 
 .navigation-socials a[href*="youtube.com"]::before {
-    content: "\f40a";
+    content: "\f167";
 }
 
 .navigation-socials a[href*="dailymotion.com"]::before {
@@ -1091,7 +1092,7 @@ body {
 }
 
 .navigation-socials a[href*="vimeo.com"]::before {
-    content: "\f167";
+    content: "\f27d";
 }
 
 .navigation-socials a[href*="spotify.com"]::before {

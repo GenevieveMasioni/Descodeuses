@@ -59,7 +59,8 @@ du menu d'administration à l'accueil du site -->
       // notre thème aura choisi d'afficher à l'emplacement "menu principal".
       wp_nav_menu(
         array(
-          'theme_location'  => 'primary'
+          'theme_location'  => 'primary',
+          'container' => false // évite que WP engloabe le <ul> d'une balise <div>
         )
       );
        ?>
@@ -71,7 +72,8 @@ du menu d'administration à l'accueil du site -->
           wp_nav_menu(
             array(
               'theme_location'  => 'primary',
-              'class'           => 'sub-navigation'
+              'menu_class'      => 'sub-navigation', // liste des classes CSS que WP doit ajouter à la balise <ul> créée
+              'container'       => false // évite que WP engloabe le <ul> d'une balise <div>
             )
           );
            ?>
