@@ -45,8 +45,42 @@ add_action('after_setup_theme', 'descodeuses_setup');
 
 function descodeuses_init_widgets() {
   // TODO COURS - Enregistrer une zone de widget N°1
+  register_sidebar(
+    array(
+      'id'  => 'widgets-section-1',
+      'name'  => 'Zone de widgets 1',
+      'description' => 'Description de la zone de widgets',
+      'before_widget' => '<div class="widget">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h4 class="widget-title widgettitle">',
+      'after_title' => '</h4>'
+    )
+  );
 
   // TODO En autonomie - Enregister les zones de widgets N°2 et N°3
+  register_sidebar(
+    array(
+      'id'  => 'widgets-section-2',
+      'name'  => 'Zone de widgets 2',
+      'description' => 'Description de la zone de widgets',
+      'before_widget' => '<div class="widget">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h4 class="widget-title widgettitle">',
+      'after_title' => '</h4>'
+    )
+  );
+
+  register_sidebar(
+    array(
+      'id'  => 'widgets-section-3',
+      'name'  => 'Zone de widgets 3',
+      'description' => 'Description de la zone de widgets',
+      'before_widget' => '<div class="widget">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h4 class="widget-title widgettitle">',
+      'after_title' => '</h4>'
+    )
+  );
 
   // TODO A la maison - Enregister les zones de widgets N°4 et barre latérale
 }

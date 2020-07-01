@@ -108,16 +108,7 @@ On appelle donc la fonction get_header(); pour inclure ce fichier header.php.
         ?>
       </nav>
     </section>
-    <!-- TODO A la maison - Déplacer la balise <aside> dans un fichier sidebar.php
-    et faire un appel de fonction pour inclure le fichier à ce niveau.
-    Indice : get_<quelque chose> -->
-    <!-- TODO A la maison - Déclarer une zone de widgets et l'insérer dynamiquement ci-après -->
-    <aside class="sidebar" id="widgets-sidebar">
-      <div class="widget">
-        <h3 class="widget-title widgettitle">Zone de widgets</h3>
-        <p>Ajout dynamique des titres et contenus des widgets.</p>
-      </div>
-    </aside>
+<?php get_sidebar(); ?>
   </main>
   <!-- De la même manière que pour l'en-tête. On déplace le contenu du pied de
   page dans un fichier footer.php pour factoriser le code. Le pied de page est
