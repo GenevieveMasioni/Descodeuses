@@ -1,6 +1,10 @@
 <?php get_header(); ?>
 <?php if(have_posts()) : ?>
   <?php while(have_posts()) : the_post(); ?>
+     <!-- TODO - En autonomie - Ajouter un attribut style à la section "page-header"
+     pour lui ajouter une image de fond correspondant à la vignette de la page.
+     Penser à vérifier si la vignette est bien définie.
+     Utiliser la fonction the_post_thumbnail_url() -->
   <section class="page-header">
     <h1 class="page-title"><?php the_title(); ?></h1>
   </section>

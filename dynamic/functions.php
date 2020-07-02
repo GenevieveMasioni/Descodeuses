@@ -91,4 +91,8 @@ function descodeuses_init_widgets() {
 // doc : https://developer.wordpress.org/reference/hooks/widgets_init/
 add_action('widgets_init', 'descodeuses_init_widgets');
 
+// TODO Autonomie - Inclure le fichier customizer.php en utilisant la
+// fonction get_template_directory()
+// https://developer.wordpress.org/reference/functions/get_template_directory/#user-contributed-notes
+
  ?>

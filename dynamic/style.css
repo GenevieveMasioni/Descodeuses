@@ -1121,13 +1121,47 @@ section.comments {
   border-top: .07rem solid var(--color-light);
 }
 
-.comment-form > * {
+.comment-form * {
   width: 100%;
-  text-align: left;
+}
+
+.comment-form label {
+	text-align: left;
 }
 
 .comment-form input[type="submit"] {
   width: auto;
+}
+
+.comment-reply-title {
+    margin-top: 5rem;
+}
+
+.comment {
+  list-style: none;
+	padding: 2rem;
+	text-align: left;
+}
+
+.comments .children {
+  margin: 1rem auto;
+}
+
+.comments li.comment:nth-child(2n+1) {
+    background: #eee;
+}
+
+.comment-meta,
+.comment-author {
+  margin-bottom: 1rem;
+}
+
+.comment-form-cookies-consent {
+	display: flex;
+}
+
+input#wp-comment-cookies-consent {
+	width: auto;
 }
 
 /*--------------------------------------------------------------

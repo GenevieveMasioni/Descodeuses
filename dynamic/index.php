@@ -6,6 +6,12 @@ différents ayant le même en-tête.
 On appelle donc la fonction get_header(); pour inclure ce fichier header.php.
 -->
 <?php get_header(); ?>
+<!-- TODO En autonomie - En vous référant à page.php, ajouter un attribut style
+à la section "page-header" pour lui ajouter une image de fond provenant du
+Customizer.
+Penser à vérifier si la vignette est bien définie.
+Utiliser la fonction get_theme_mod() - ne passer que le premier argument
+ -->
   <section class="page-header">
     <h1 class="page-title">Blog</h1>
     <!-- TODO Volontaire - Déclarer une zone de menu "Menu des catégories" et

@@ -26,7 +26,7 @@ sur votre site WordPress local.
 - [ ] Modèle des articles (blog) : `index.php`
 - [x] Modèle d’un articles : `single.php`
 - [ ] Modèle des commentaires : `comments.php`
-- [ ] Modèle de page : `page.php`
+- [x] Modèle de page : `page.php`
 - [ ] Modèle de page d’archive : `archive.php`
 - [ ] Partie de modèle d’en-tête : `header.php`
 - [ ] Partie de modèle de pied de page : `footer.php`

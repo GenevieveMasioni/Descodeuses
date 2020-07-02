@@ -32,7 +32,7 @@
               }
               echo trim($output, $separator);
               ?>
-              <h4 class="comments-number">
+            <h4 class="comments-number">
               <!-- TODO Afficher dynamiquement le nombre de commentaire en
                     faisant appel à comments_number() -
                voir https://developer.wordpress.org/reference/functions/comments_number/#user-contributed-notes -->
@@ -68,7 +68,7 @@
           );
           ?>
           <section class="comments">
-            <h3 class="comments-title">Laisser un commentaire</h3>
+            <h3 class="comments-title">2 commentaires pour "10 conseils pour un site parfait"</h3>
             <form class="comment-form" action="index.html" method="post">
               <label for="name">Nom</label>
               <input type="text" name="name" required>
