@@ -23,18 +23,18 @@ sur votre site WordPress local.
 # Récapitulatif des modèles à développer dans "dynamic"
 
 - [ ] Modèle d’accueil statique : `front-page.php`
-- [ ] Modèle des articles (blog) : `index.php`
+- [x] Modèle des articles (blog) : `index.php`
 - [x] Modèle d’un articles : `single.php`
-- [ ] Modèle des commentaires : `comments.php`
+- [x] Modèle des commentaires : `comments.php`
 - [x] Modèle de page : `page.php`
 - [ ] Modèle de page d’archive : `archive.php`
 - [ ] Partie de modèle d’en-tête : `header.php`
-- [ ] Partie de modèle de pied de page : `footer.php`
-- [ ] Partie de modèle de barre latérale : `sidebar.php`
+- [x] Partie de modèle de pied de page : `footer.php`
+- [x] Partie de modèle de barre latérale : `sidebar.php`
 
 ### + les fichiers suivants :
 - [x] `style.css`
-- [ ] `functions.php`
+- [x] `functions.php`
 - [ ] `customizer.php`
 - [x] `screenshot.png`
 - [x] `readme.txt`
