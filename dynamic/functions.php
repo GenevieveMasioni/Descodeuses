@@ -83,6 +83,30 @@ function descodeuses_init_widgets() {
   );
 
   // TODO A la maison - Enregister les zones de widgets N°4 et barre latérale
+
+  register_sidebar(
+    array(
+      'id'  => 'widgets-section-4',
+      'name'  => 'Zone de widgets 4',
+      'description' => 'Description de la zone de widgets',
+      'before_widget' => '<div class="widget">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h4 class="widget-title widgettitle">',
+      'after_title' => '</h4>'
+    )
+  );
+
+  register_sidebar(
+    array(
+      'id'  => 'widgets-sidebar',
+      'name'  => 'Zone de widgets de la barre latérale',
+      'description' => 'Description de la zone de widgets',
+      'before_widget' => '<div class="widget">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h4 class="widget-title widgettitle">',
+      'after_title' => '</h4>'
+    )
+  );
 }
 
 // Exécution de notre fonction immédiatement après l'exécution de widgets_init
