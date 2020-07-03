@@ -48,7 +48,7 @@ dans `front-page.php`. La page d'accueil affichera cette mise en forme indépend
 # Pour aller plus loin
 
 ### D'autres modèles à développer :
-- [ ] Modèle de page pour `search.php`
+- [ ] Modèle de page pour les résultats de recherche : `search.php`
 - [ ] Modèle pour le formulaire de recherche : `searchform.php`
 - [ ] Modèle de page d'erreur : `404.php`
 - [ ] Modèle de page d’archive : `archive.php`
@@ -70,7 +70,7 @@ Pour cela, nous créons un dossier `languages` qui contiendra les fichiers de tr
 Par exemple, dans `index.php` :
 - au lieu d'écrire `<a href="<?php the_permalink(); ?>">Lire la suite</a>` en dur (chaîne de caractères non traduisible)
 - nous écrirons : `<a href="<?php the_permalink(); ?>">__('Lire la suite', 'descodeuses')</a>`
-- ou encore : `<a href="<?php the_permalink(); ?>">__e('Lire la suite', 'descodeuses')</a>` si on fait appel à `echo` pour afficher la chaîne sur la navigateur (lire article recommandé ci-dessous pour en savoir plus)
+- ou encore : `<a href="<?php the_permalink(); ?>">__e('Lire la suite', 'descodeuses')</a>` si on fait appel à `echo` pour afficher la chaîne sur le navigateur (lire l'article recommandé ci-dessous pour en savoir plus)
 
 **NB** Avec `descodeuses` le nom du dossier du thème (renommer `dynamic` par `descodeuses`). WordPress ira ainsi chercher lui-même le fichier de traduction nécessaire dans le dossier `languages` pour traduire la chaîne `Lire la suite` dans la langue choisie par les utilisateurs de notre thème dans leurs réglages WordPress !
 
@@ -88,12 +88,26 @@ Je vous encourage maintenant à trouver, en vous aidant d'Internet et des forums
 
 #### Inclure correctement les fichiers de style CSS dans notre thème
 
-Pour inclure notre fichier `style.css` pour avons ajouté une balise `<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">` dans `header.php` mais est-ce que vraiment ce que recommande WordPress ?
+Pour inclure notre fichier `style.css` nous avons ajouté une balise `<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">` dans `header.php` mais est-ce recommandé par WordPress ?
 
 Suspens... La réponse est non ! Quelle est la bonne façon de faire ?
-Passer par `functions.php` ! Aide :
+Passer par `functions.php` !
+
+Aide :
 - Documentation officielle : [Including CSS & JavaScript](https://developer.wordpress.org/themes/basics/including-css-javascript/)
 - Article de blog : [How to Properly Include CSS and JS in your WordPress Themes and Plugins](https://rudrastyh.com/wordpress/include-css-and-javascript.html)
+
+Faire de même pour les lignes de code suivantes (toujours dans `header.php`) :
+
+```
+<!-- Inclusion de Google Fonts pour pouvoir utiliser la police de caractère "Poppins" -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<!-- Inclusion d'une feuille de style pour pouvoir utiliser la police de caractère FontAwesome -->
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<!-- Inclusion de Font Awesome pour pouvoir utiliser des icons -->
+<script src="https://kit.fontawesome.com/4e5f136f21.js" crossorigin="anonymous"></script>
+
+```
 
 # Ressources
 
