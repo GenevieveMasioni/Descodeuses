@@ -27,7 +27,6 @@ sur votre site WordPress local.
 - [x] Modèle d’un articles : `single.php`
 - [x] Modèle des commentaires : `comments.php`
 - [x] Modèle de page : `page.php`
-- [ ] Modèle de page d’archive : `archive.php`
 - [ ] Partie de modèle d’en-tête : `header.php`
 - [x] Partie de modèle de pied de page : `footer.php`
 - [x] Partie de modèle de barre latérale : `sidebar.php`
@@ -43,6 +42,7 @@ sur votre site WordPress local.
 - [ ] `404.php`
 - [ ] `search.php`
 - [ ] `searchform.php`
+- [ ] Modèle de page d’archive : `archive.php`
 
 # Ressources
 

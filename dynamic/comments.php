@@ -12,12 +12,14 @@
   // le permettent
   // (Tableau de bord > Réglages > Commentaires > Diviser les commentaires en pages,
   // avec X commentaires par page)
+  echo '<div class="comments-pagination">';
   paginate_comments_links(
     array(
       'prev_text'          => '<i class="fas fa-arrow-left"></i> Précédent',
       'next_text'          => 'Suivant <i class="fas fa-arrow-right"></i>'
     )
   );
+  echo '</div>';
 
   // formulaire de commentaire
   comment_form(
