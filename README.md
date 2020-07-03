@@ -23,12 +23,12 @@ sur votre site WordPress local.
 # Récapitulatif des modèles à développer dans "dynamic"
 Pour plus d'informations sur les modèles de page possibles et leur utilité, se référer à la [documentation officielle](https://developer.wordpress.org/themes/basics/template-files/#common-wordpress-template-files).
 
-- [ ] Modèle de page d’accueil statique (1) : `front-page.php`
+- [x] Modèle de page d’accueil statique (1) : `front-page.php`
 - [x] Modèle des articles (blog - liste des articles) : `index.php`
 - [x] Modèle d’un article : `single.php`
 - [x] Modèle des commentaires (2) : `comments.php`
 - [x] Modèle de page (3) : `page.php`
-- [ ] Partie de modèle d’en-tête : `header.php`
+- [x] Partie de modèle d’en-tête : `header.php`
 - [x] Partie de modèle de pied de page : `footer.php`
 - [x] Partie de modèle de barre latérale : `sidebar.php`
 
@@ -41,7 +41,7 @@ dans `front-page.php`. La page d'accueil affichera cette mise en forme indépend
 ### + les fichiers suivants :
 - [x] `style.css`
 - [x] `functions.php`
-- [ ] `customizer.php`
+- [x] `customizer.php`
 - [x] `screenshot.png`
 - [x] `readme.txt`
 
@@ -54,7 +54,19 @@ dans `front-page.php`. La page d'accueil affichera cette mise en forme indépend
 - [ ] Modèle de page d’archive : `archive.php`
 
 ### Rendre le thème "prêt à traduire"
-Vous avez certainement vu les fonctions `__()` et `__e()`
+Vous avez certainement vu les fonctions `__()` et `__e()` entourer du texte dans les extraits de code trouvés sur Internet... Ces fonctions servent à rendre un thème "prêt à traduire" par vous-même ou d'autres développeurs.
+
+Pour cela, nous créons un dossier `languages` qui contiendra les fichiers de traduction des chaînes de caractères de notre thème dans différentes langues.
+
+Par exemple, dans `index.php` :
+- au lieu d'écrire `<a href="<?php the_permalink(); ?>">Lire la suite</a>` en dur (chaîne de caractères non traduisible)
+- nous écrirons : `<a href="<?php the_permalink(); ?>">__('Lire la suite', 'descodeuses')</a>`
+- ou encore : `<a href="<?php the_permalink(); ?>">__e('Lire la suite', 'descodeuses')</a>` si on fait appel à `echo` pour afficher la chaîne sur la navigateur (lire article recommandé ci-dessous pour en savoir plus)
+
+*NB* Avec `descodeuses` le nom du dossier du thème (renommer `dynamic` par `descodeuses`). WordPress ira ainsi chercher lui-même le fichier de traduction nécessaire dans le dossier `languages` pour traduire la chaîne `Lire la suite` dans la langue choisie par les utilisateurs de notre thème dans leurs réglages WordPress !
+
+Je vous invite à lire l'article suivant (en Anglais) pour en apprendre davantage sur la traduction de thème et comment l'implémenter :
+"[How to Localize a WordPress Theme and Make it Translation Ready](https://premium.wpmudev.org/blog/how-to-localize-a-wordpress-theme-and-make-it-translation-ready/)"
 
 # Ressources
 
