@@ -13,12 +13,9 @@ l'association [Descodeuses](https://descodeuses.org/ "Site de l'association").
 
 # Où mettre mon dossier "dynamic" en local ?
 
-Comme nous développons en local, le dossier "dynamic", correspondant à notre thème WP,
-est à placer dans : `<dossier-d-installation-WordPress-local>/wp-content/themes/dynamic`.
+Comme nous développons en local, le dossier "dynamic", correspondant à notre thème WP, est à placer dans : `<dossier-d-installation-WordPress-local>/wp-content/themes/dynamic`.
 
-Pour éditer le code du thème, ouvrir le dossier `dynamic` dans votre éditeur de
-code favori (Atom, par exemple) et codez ! Vous verrez immédiatement les changements
-sur votre site WordPress local.
+Pour éditer le code du thème, ouvrir le dossier `dynamic` dans votre éditeur de code favori (Atom, par exemple) et coder ! Vous verrez immédiatement les changements sur votre site WordPress local.
 
 # Récapitulatif des modèles à développer dans "dynamic"
 Pour plus d'informations sur les modèles de page possibles et leur utilité, se référer à la [documentation officielle](https://developer.wordpress.org/themes/basics/template-files/#common-wordpress-template-files).
@@ -35,8 +32,11 @@ Pour plus d'informations sur les modèles de page possibles et leur utilité, se
 (1) La page d'accueil du site WP sera mise en forme selon la structure définie
 dans `front-page.php`. La page d'accueil affichera cette mise en forme indépendamment des réglages dans *Tableau de bord > Réglages > Lecture*.
 
-(2) Liste des commentaires et formulaire d'ajout d'un commentaire
-(3) Modèle utilisé par WP pour afficher toute page su site qui n'est pas la page 'Blog', la page d'un article (`single.php`) ou la page d'accueil forcée (`front-page.php`).
+Toutefois, il faut configurer dans *Tableau de bord > Réglages > Lecture* la page d'accueil statique et sélectionner la page 'Blog' comme page des articles. Autrement, la page 'Blog' n'affichera pas la liste des articles !
+
+(2) Liste des commentaires et formulaire d'ajout d'un commentaire.
+
+(3) Modèle utilisé par WP pour afficher toute page du site qui n'est pas la page 'Blog', la page d'un article (`single.php`) ou la page d'accueil forcée (`front-page.php`).
 
 ### + les fichiers suivants :
 - [x] `style.css`
