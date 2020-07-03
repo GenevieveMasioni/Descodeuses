@@ -45,11 +45,16 @@ dans `front-page.php`. La page d'accueil affichera cette mise en forme indépend
 - [x] `screenshot.png`
 - [x] `readme.txt`
 
-### Pour aller plus loin, d'autres modèles à développer :
+# Pour aller plus loin
+
+### D'autres modèles à développer :
 - [ ] Modèle de page d'erreur : `404.php`
 - [ ] Modèle de page pour `search.php`
 - [ ] Modèle pour le formulaire de recherche : `searchform.php`
 - [ ] Modèle de page d’archive : `archive.php`
+
+### Rendre le thème "prêt à traduire"
+Vous avez certainement vu les fonctions `__()` et `__e()`
 
 # Ressources
 

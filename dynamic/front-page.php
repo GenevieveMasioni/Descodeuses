@@ -1,9 +1,15 @@
 <?php get_header(); ?>
-  <!-- TODO - Ajouter une balise style à <section> et définir en image de fond l'image du paramètre 'fp_container_image'
-            + Si la case "effet boxy" est cochée (clé 'fp_container_boxy'), ajouter la classe CSS "boxy-header"
+  <!-- TODO - Ajouter une balise style à <section> et définir en image de fond
+              l'image du paramètre 'fp_container_image'
+            + Si la case "effet boxy" est cochée (clé 'fp_container_boxy'), *
+            ajouter la classe CSS "boxy-header"
               à <section> à l'aide de la fonction echo
               Utiliser : get_theme_mod() -->
-  <section class="page-header front-page-header">
+  <section class="page-header front-page-header
+  <?php
+  if(get_theme_mod('fp_container_boxy')) echo "boxy-header";
+   ?>"
+  style="background-image: url('<?php echo get_theme_mod('fp_container_image'); ?>');">
     <!-- TODO - Afficher dynamiquement le titre défini dans le paramètre 'fp_texts_title'
               + ajouter une balise style et déterminer en pixel la taille du titré définie
                 dans le paramètre 'fp_texts_title_size' (ne pas oublier le suffixe px)
