@@ -48,10 +48,19 @@ dans `front-page.php`. La page d'accueil affichera cette mise en forme indépend
 # Pour aller plus loin
 
 ### D'autres modèles à développer :
-- [ ] Modèle de page d'erreur : `404.php`
 - [ ] Modèle de page pour `search.php`
 - [ ] Modèle pour le formulaire de recherche : `searchform.php`
+- [ ] Modèle de page d'erreur : `404.php`
 - [ ] Modèle de page d’archive : `archive.php`
+- [ ] Prise en compte de WooCommerce :
+  - [ ] lier l'icône panier dans `header.php` à WooCommerce
+    - ne l'afficher que si WooCommerce est installé sur le site
+    - mettre à jour le nombre affiché selon le nombre d'articles dans le panier WooCommerce
+  - [ ] modèle de page d'un produit : `single-product.php` dans un dossier `/woocommerce` en vous inspirant de `page.php`
+
+Aide pour WooCommerce :
+- Voir [Documentation officielle de WooCommerce](https://docs.woocommerce.com/documentation/plugins/woocommerce/woocommerce-codex/theming/)
+- Liste des [fonctions officielles WooCommerce](https://docs.woocommerce.com/wc-apidocs/package-WooCommerce.Functions.html)
 
 ### Rendre le thème "prêt à traduire"
 Vous avez certainement vu les fonctions `__()` et `__e()` entourer du texte dans les extraits de code trouvés sur Internet... Ces fonctions servent à rendre un thème "prêt à traduire" par vous-même ou d'autres développeurs.
@@ -63,10 +72,28 @@ Par exemple, dans `index.php` :
 - nous écrirons : `<a href="<?php the_permalink(); ?>">__('Lire la suite', 'descodeuses')</a>`
 - ou encore : `<a href="<?php the_permalink(); ?>">__e('Lire la suite', 'descodeuses')</a>` si on fait appel à `echo` pour afficher la chaîne sur la navigateur (lire article recommandé ci-dessous pour en savoir plus)
 
-*NB* Avec `descodeuses` le nom du dossier du thème (renommer `dynamic` par `descodeuses`). WordPress ira ainsi chercher lui-même le fichier de traduction nécessaire dans le dossier `languages` pour traduire la chaîne `Lire la suite` dans la langue choisie par les utilisateurs de notre thème dans leurs réglages WordPress !
+**NB** Avec `descodeuses` le nom du dossier du thème (renommer `dynamic` par `descodeuses`). WordPress ira ainsi chercher lui-même le fichier de traduction nécessaire dans le dossier `languages` pour traduire la chaîne `Lire la suite` dans la langue choisie par les utilisateurs de notre thème dans leurs réglages WordPress !
 
 Je vous invite à lire l'article suivant (en Anglais) pour en apprendre davantage sur la traduction de thème et comment l'implémenter :
 "[How to Localize a WordPress Theme and Make it Translation Ready](https://premium.wpmudev.org/blog/how-to-localize-a-wordpress-theme-and-make-it-translation-ready/)"
+
+### Respect des bonnes pratiques de développement
+
+#### Eviter d'écrire du CSS dans du HTML
+
+En terme de qualité de code, on déconseille d'écrire du CSS dans du HTML.
+Nous l'avons pourtant fait plusieurs fois. Pourquoi ? Parce que cette solution est la plus rapide !
+
+Je vous encourage maintenant à trouver, en vous aidant d'Internet et des forums techniques tels que le [WordPress Forum](https://wordpress.org/support/forum/wp-advanced/) ou [StackOverflow](https://stackoverflow.com/), la **bonne manière** de faire des modifications de style (en lien avec les paramètres de notre Customizer) pour garder un code propre. :)
+
+#### Inclure correctement les fichiers de style CSS dans notre thème
+
+Pour inclure notre fichier `style.css` pour avons ajouté une balise `<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">` dans `header.php` mais est-ce que vraiment ce que recommande WordPress ?
+
+Suspens... La réponse est non ! Quelle est la bonne façon de faire ?
+Passer par `functions.php` ! Aide :
+- Documentation officielle : [Including CSS & JavaScript](https://developer.wordpress.org/themes/basics/including-css-javascript/)
+- Article de blog : [How to Properly Include CSS and JS in your WordPress Themes and Plugins](https://rudrastyh.com/wordpress/include-css-and-javascript.html)
 
 # Ressources
 
