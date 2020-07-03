@@ -172,7 +172,13 @@ function descodeuses_customize_register($wp_customize) {
   // identifiant : 'fp_texts_title_size'
   // valeur par défaut : 90
   // type : 'theme_mod'
-
+  $wp_customize->add_setting(
+    'fp_texts_title_size',
+    array(
+    'default'     => 90,
+    'type'        => 'theme_mod'
+    )
+  );
 
 
   // TODO - En autonomie - Ajouter un contrôleur associé au paramètre 'fp_texts_title_size'
@@ -181,6 +187,16 @@ function descodeuses_customize_register($wp_customize) {
   // section : 'fp_texts'
   // type : nombre - Voir doc pour connaître la valeur à passer :
   // https://developer.wordpress.org/reference/classes/wp_customize_control/__construct/
+  $wp_customize->add_control(
+    'fp_texts_title_size',
+    array(
+      'label'          => 'Taille du titre',
+      'description'    => 'Taille du texte du titre principal',
+      'section'        => 'fp_texts',
+      'setting'        => 'fp_texts_title_size',
+      'type'           => 'number'
+    )
+  );
 
 
 
