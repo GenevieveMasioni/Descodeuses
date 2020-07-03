@@ -37,7 +37,12 @@ function descodeuses_customize_register($wp_customize) {
   // identifiant : 'front_page'
   // titre : 'Page d\'accueil principale'
   // appel de fonction/prototype similaire à add_section() !
-
+  $wp_customize -> add_panel(
+    'front_page',
+    array(
+      'title'         => 'Page d\'accueil principale'
+    )
+  );
 
 
   // TODO - En autonomie - Ajouter une nouvelle section au Customizer
@@ -45,7 +50,14 @@ function descodeuses_customize_register($wp_customize) {
   // identifiant : 'fp_container'
   // description : 'Réglages du conteneur de la page d\'accueil principale'
   // Cette nouvelle section est une sous-section de 'front_page' (clé 'panel')
-
+  $wp_customize->add_section(
+    'fp_container',
+    array(
+      'title' => 'Conteneur',
+      'description'   => 'Réglages du conteneur de la page d\'accueil principale',
+      'panel'         => 'front_page'
+    )
+  );
 
 
   // TODO - En autonomie - Ajouter un nouveau paramètre au Customizer
@@ -53,7 +65,13 @@ function descodeuses_customize_register($wp_customize) {
   // valeur par défaut : chemin vers l'image '/assets/images/louvre-amy-leigh-barnard-unsplash.jpg'
   // - utiliser la fonction get_template_directory()
   // type : 'theme_mod'
-
+  $wp_customize->add_setting(
+    'fp_container_image',
+    array(
+    'default'   => get_template_directory() . '/assets/images/louvre-amy-leigh-barnard-unsplash.jpg',
+    'type'      => 'theme_mod'
+    )
+  );
 
 
   // TODO - En autonomie - Ajouter un contrôleur associé au paramètre 'fp_container_image'
@@ -61,14 +79,31 @@ function descodeuses_customize_register($wp_customize) {
   // libellé : 'Image de fond'
   // description : 'Image de fond du conteneur de la page d\'accueil'
   // section : 'fp_container'
-
+  $wp_customize->add_control(
+    new WP_Customize_Image_control(
+      $wp_customize,
+      'fp_container_image',
+      array(
+        'label'   => 'Image de fond',
+        'description' => 'Image de fond du conteneur de la page d\'accueil',
+        'section' => 'fp_container',
+        'setting'  => 'fp_container_image'
+      )
+    )
+  );
 
 
   // TODO - En autonomie - Ajouter un nouveau paramètre au Customizer
   // identifiant : 'fp_container_boxy'
   // valeur par défaut : false (booléen)
   // type : 'theme_mod'
-
+  $wp_customize->add_setting(
+    'fp_container_boxy',
+    array(
+    'default'     => false,
+    'type'        => 'theme_mod'
+    )
+  );
 
 
   // TODO - En autonomie - Ajouter un contrôleur associé au paramètre 'fp_container_boxy'
@@ -77,6 +112,16 @@ function descodeuses_customize_register($wp_customize) {
   // section : 'fp_container'
   // type : case à cocher - Voir doc pour connaître la valeur à passer :
   // https://developer.wordpress.org/reference/classes/wp_customize_control/__construct/
+  $wp_customize->add_control(
+      'fp_container_boxy',
+      array(
+        'label'   => 'Affichage avec effet boxy',
+        'description' => 'Style du conteneur de la page d\'accueil.',
+        'section' => 'fp_container',
+        'setting'  => 'fp_container_boxy',
+        'type'      => 'checkbox'
+      )
+  );
 
 
   // TODO - En autonomie - Ajouter une nouvelle section au Customizer
