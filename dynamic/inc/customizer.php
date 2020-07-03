@@ -129,13 +129,26 @@ function descodeuses_customize_register($wp_customize) {
   // identifiant : 'fp_texts'
   // description : 'Réglages pour les textes de la page d\'accueil principale.'
   // Cette nouvelle section est une sous-section de 'front_page' (clé 'panel')
-
+  $wp_customize -> add_section(
+    'fp_texts',
+    array(
+      'title'         => 'Textes et styles',
+      'description'   => 'Réglages pour les textes de la page d\'accueil principale.',
+      'panel'         => 'front_page'
+    )
+  );
 
   // TODO - En autonomie - Ajouter un nouveau paramètre au Customizer
   // identifiant : 'fp_texts_title'
   // valeur par défaut : 'Bienvenue !'
   // type : 'theme_mod'
-
+  $wp_customize->add_setting(
+    'fp_texts_title',
+    array(
+    'default'     => 'Bienvenue !',
+    'type'        => 'theme_mod'
+    )
+  );
 
 
   // TODO - En autonomie - Ajouter un contrôleur associé au paramètre 'fp_texts_title'
@@ -144,8 +157,16 @@ function descodeuses_customize_register($wp_customize) {
   // section : 'fp_texts'
   // type : texte - Voir doc pour connaître la valeur à passer :
   // https://developer.wordpress.org/reference/classes/wp_customize_control/__construct/
-
-
+  $wp_customize->add_control(
+    'fp_texts_title',
+    array(
+      'label'          => 'Titre principal',
+      'description'    => 'Texte du titre principal',
+      'section'        => 'fp_texts',
+      'setting'        => 'fp_texts_title',
+      'type'           => 'text'
+    )
+  );
 
   // TODO - En autonomie - Ajouter un nouveau paramètre au Customizer
   // identifiant : 'fp_texts_title_size'

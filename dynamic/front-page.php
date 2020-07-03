@@ -14,7 +14,7 @@
               + ajouter une balise style et déterminer en pixel la taille du titré définie
                 dans le paramètre 'fp_texts_title_size' (ne pas oublier le suffixe px)
                 Utiliser : get_theme_mod() -->
-    <h1 class="page-title">Bienvenue !</h1>
+    <h1 class="page-title"><?php echo get_theme_mod('fp_texts_title'); ?></h1>
     <!-- TODO - Afficher dynamiquement la description définie dans le paramètre 'fp_texts_description'
                 Utiliser : get_theme_mod() -->
     <p class="page-description">
